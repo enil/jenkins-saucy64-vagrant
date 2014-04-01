@@ -1,0 +1,4 @@
+# jenkins/vars/main.yml
+---
+tomcat_dir:   "/var/lib/tomcat"
+jenkins_dir:  "{{ tomcat_dir }}/webapps/jenkins"

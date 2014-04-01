@@ -1,0 +1,9 @@
+# jenkins/tasks/main.yml
+---
+- name: install packages
+  apt: pkg={{ item }}
+  with_items:
+    - openjdk-6-jdk
+    - git
+    - maven
+    - tomcat7

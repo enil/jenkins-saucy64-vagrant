@@ -1,0 +1,6 @@
+deb {{ apt_mirror_url }} saucy main universe multiverse
+deb-src {{ apt_mirror_url }} saucy main universe multiverse
+deb {{ apt_mirror_url }} saucy-updates  main universe multiverse
+deb-src {{ apt_mirror_url }} saucy-updates main universe multiverse
+deb {{ apt_mirror_url }} saucy-security main universe multiverse
+deb-src {{ apt_mirror_url }} saucy-security main universe multiverse

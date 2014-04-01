@@ -1,0 +1,3 @@
+# system/defaults/main.yml
+---
+apt_mirror_url: mirror://mirrors.ubuntu.com/mirrors.txt

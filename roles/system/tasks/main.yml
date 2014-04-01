@@ -1,0 +1,7 @@
+# system/tasks/main.yml
+---
+- name: set apt mirrors
+  template: src=sources.list dest=/etc/apt/sources.list
+  notify:
+    - update apt
+- meta: flush_handlers
