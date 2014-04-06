@@ -1,0 +1,7 @@
+# jenkins/vars/main.yml
+---
+tomcat_dir:       "/var/lib/tomcat7"
+tomcat_conf_dir:  "/etc/tomcat7"
+webapps_dir:      "{{ tomcat_dir }}/webapps"
+jenkins_dir:      "{{ webapps_dir }}/jenkins"
+jenkins_war_path: "{{ webapps_dir }}/jenkins.war"

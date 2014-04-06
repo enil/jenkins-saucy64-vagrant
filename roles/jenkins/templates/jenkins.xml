@@ -1,0 +1,6 @@
+<Context docBase="{{ jenkins_war_path }}">
+	<Environment name="JENKINS_HOME"
+		type="java.lang.String"
+		value="{{ jenkins_dir }}"
+		override="true" />
+</Context>
