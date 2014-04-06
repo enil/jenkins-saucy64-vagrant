@@ -1,0 +1,4 @@
+# jenkins/meta/main.yml
+---
+dependencies:
+  - { role: system }
