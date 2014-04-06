@@ -15,6 +15,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ansible.sudo = true
     ansible.playbook = "jenkins-saucy64.yml"
     ansible.extra_vars = {
+      # speciy a custom Jenkins version
+      #jenkins_war_version: "1.532.2"
+      # ...or the latest version
+      #jenkins_war_version: "latest"
+
       # specify a custom apt mirror
       #apt_mirror_url: "mirror://mirrors.ubuntu.com/mirrors.txt"
     }

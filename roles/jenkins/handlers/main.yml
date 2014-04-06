@@ -1,0 +1,4 @@
+# jenkins/handlers/main.yml
+---
+- name: restart tomcat
+  service: name=tomcat7 state=restarted
