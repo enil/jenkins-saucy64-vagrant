@@ -12,7 +12,7 @@
   service: name=tomcat7 state=running enabled=yes
 
 - name: deploy jenkins
-  get_url: url={{ jenkins_war_url }} dest={{ jenkins_war_path }} mode=440 owner=root group=root
+  get_url: url={{ jenkins_war_url }} dest={{ jenkins_war_path }} mode=444 owner=root group=root
 
 - name: set jenkins context
   template: src=jenkins.xml dest={{ tomcat_conf_dir }}/Catalina/localhost/jenkins.xml mode=644 owner=root group=root
