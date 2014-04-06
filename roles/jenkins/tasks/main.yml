@@ -11,6 +11,10 @@
 - name: enable tomcat service
   service: name=tomcat7 state=running enabled=yes
 
+- name: set maximum java memory use for tomcat
+  lineinfile: dest={{ tomcat_defaults_path }} regexp='^JAVA_OPTS=' line='{{ tomcat_java_opts }}'
+  notify: restart tomcat
+
 - name: deploy jenkins
   get_url: url={{ jenkins_war_url }} dest={{ jenkins_war_path }} mode=444 owner=root group=root
 

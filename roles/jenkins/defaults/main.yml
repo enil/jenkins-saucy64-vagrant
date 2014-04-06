@@ -1,4 +1,6 @@
 # jenkins/defaults/main.yml
 ---
-jenkins_war_version:  "latest"
-jenkins_war_url:      "http://mirrors.jenkins-ci.org/war-stable/{{ jenkins_war_version }}/jenkins.war"
+jenkins_war_version:  'latest'
+jenkins_war_url:      'http://mirrors.jenkins-ci.org/war-stable/{{ jenkins_war_version }}/jenkins.war'
+tomcat_max_memory:    '512m'
+tomcat_java_opts:     'JAVA_OPTS="-Djava.awt.headless=true -Xmx{{ tomcat_max_memory }} -XX:+UseConcMarkSweepGC"'

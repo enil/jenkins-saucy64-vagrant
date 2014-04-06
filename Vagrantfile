@@ -14,15 +14,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :ansible do |ansible|
     ansible.sudo = true
     ansible.playbook = "jenkins-saucy64.yml"
-    ansible.extra_vars = {
-      # speciy a custom Jenkins version
-      #jenkins_war_version: "1.532.2"
-      # ...or the latest version
-      #jenkins_war_version: "latest"
 
-      # specify a custom apt mirror
-      #apt_mirror_url: "mirror://mirrors.ubuntu.com/mirrors.txt"
-    }
+    ansible.extra_vars = {}
+    # speciy a custom Jenkins version
+    #ansible.extra_vars[:jenkins_war_version] = "1.532.2"
+    # ...or the latest version
+    #ansible.extra_vars[:jenkins_war_version] = "latest"
+
+    # specify a custom apt mirror
+    #ansible.extra_vars[:apt_mirror_url] = "mirror://mirrors.ubuntu.com/mirrors.txt"
+
+    # specifiy the max memory use for Tomcat (increase if Jenkins runs out of memory)
+    #ansible.extra_vars[:tomcat_max_memory] = "512mm"
   end
 
   config.vm.provider :virtualbox do |vbox|
